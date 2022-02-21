@@ -13,15 +13,16 @@ let map = L.map('mapid').setView([34.0522, -118.2437], 14);
 //     zoom: 4                 //scale 0-80
 //   });
 
-// Add a marker Leaflet starter code
+// Add a [map] marker Leaflet starter code
 // var marker = L.marker([51.5, -0.09]).addTo(map);
+
 // Our version...Add a [map] marker to the map for Los Angeles, California.
 // let marker = L.marker([34.0522, -118.2437]).addTo(map);
 
 // Add a [circle] marker to the map for Los Angeles, California
 L.circleMarker([34.0522, -118.2437], {
     radius: 300,
-    color: "#black",        //circle color: black
+    color: "black",        //circle color: black
     fillColor: "#ffffa1"    //circle outline: yellow
  }).addTo(map);
 
