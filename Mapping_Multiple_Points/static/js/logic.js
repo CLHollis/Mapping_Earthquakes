@@ -38,10 +38,11 @@ let cityData = cities;
 cityData.forEach(function(city) {
     console.log(city)
     L.circleMarker(city.location, {     //change the marker for each city to a circle
-        radius: city.population/200000,   //with radius = to city's population | /100,000 to
-        color: "orange",
-        weight: 2
-    })                                  // decrease radius so circle markers fit on the map
+        radius: city.population/200000, //with radius = to city's population /200,000 to
+                                        //decrease radius so circle markers fit on the map
+        color: "orange",                // marker color: orange
+        weight: 2                       // marker line weight: 2  (Stroke width in pixels)
+    })                                  
     .bindPopup("<h2>" +         //size: header 2
         city.city +                 //city from city object
         ", " +                      // ,
@@ -53,7 +54,7 @@ cityData.forEach(function(city) {
   .addTo(map);
 });
 
-// We create the tile layer that will be the background of our map.
+// We create the tile layer that will be the background of our map.  //back to DARK
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
