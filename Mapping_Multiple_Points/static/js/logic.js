@@ -42,15 +42,10 @@ cityData.forEach(function(city) {
                                         //decrease radius so circle markers fit on the map
         color: "orange",                // marker color: orange
         weight: 2                       // marker line weight: 2  (Stroke width in pixels)
-    })                                  
-    .bindPopup("<h2>" +         //size: header 2
-        city.city +                 //city from city object
-        ", " +                      // ,
-        city.state +                //state from city object
-        "</h2> <hr> <h3>Population " +    //end header 2 | <hr> | header 3: "Population"
-        city.population             //population from city object
-        .toLocaleString() +         //format the population with a thousands separator (,) 
-        "</h3>")                    //end header 3
+    })     
+    //put data in pop-up marker                             
+    //<header 2> + city from city object + , + state from city object + <end header 2><hr><h3>Population + population from city object.format the population with a thousands separator (,)</h3>
+    .bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")  
   .addTo(map);
 });
 
