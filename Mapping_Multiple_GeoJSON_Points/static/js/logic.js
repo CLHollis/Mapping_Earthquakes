@@ -43,21 +43,17 @@ d3.json(airportData).then(function(data) {
 L.geoJSON(data).addTo(map);
 });
 
-// //SKILL DRILL ...can't figure out
-// //  Edit your L.geoJson() layer to add a popup marker that displays all airports' codes and names 
-// //  for both the Street and Dark layers.
-// //Grabbing our GeoJSON data.
-// d3.json(airportData).then(function(data) {
-//   console.log(data);
-//   // Creating a GeoJSON layer with the retrieved data.
-//   L.geoJSON(data, {
-//     // We turn each feature into a marker on the map.
-//     onEachFeature: function(feature, layer) {    //add pointToLayer function
-//       //see what is passed with the layer argument
-//       console.log(layer);  
-//       layer.bindPopup("<h2>" + "Airport code: " + " " + feature.properties.faa + "</h2> <hr> <h3>" + "Airport name: " + " " + feature.properties.name + "</h3>");  
-//     }
-//   })
-// }).addTo(map);
+//SKILL DRILL
+//  Edit your L.geoJson() layer to add a popup marker that displays all airports' codes and names 
+//  for both the Street and Dark layers.
+d3.json(airportData).then(function(data) {
+  console.log(data);
 
-
+  // Creating a GeoJSON layer with the retrieved data.
+L.geoJSON(data, {
+  onEachFeature: function(feature, layer) {
+    layer.bindPopup("<h3> Airport code: " + feature.properties.faa + "</h3> <hr><h3> Airline name: " + feature.properties.name + "</h3>");
+  }
+})
+.addTo(map);
+});
