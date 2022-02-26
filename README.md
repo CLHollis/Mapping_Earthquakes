@@ -1,11 +1,20 @@
 # Create an Interactive World Earthquake Map
 ### Include the following:
 - past 7 days activity
-- each earthquake has a pop-up with Magnitude and 
-- Multiple view that the user can toggle between (Streets, Sattelite, Terrain, Dark, Night)
-- Multiple bits of information that can be added or removed from the map, aka overlays (All Earthquakes, Tectonic Plates, Major Earthquakes[only with 4.5+ magnitude])
+- each earthquake has a pop-up with Magnitude and Location
+- Multiple views that the user can toggle between:
+  -   Streets
+  -   Sattelite
+  -   Terrain
+  -   Dark
+  -   Night
+- Multiple views of information that can be added or removed from the map, aka overlays:
+  -   All Earthquakes
+  -   Tectonic Plates
+  -   Major Earthquakes[only with 4.5+ magnitude]
 - Add a legend (top is for Major Earthquakes, bottom is for All Earthquakes)
-- ### Extra Findings: By changing the opacity of the circleMarkers, you can see where the earthquake took place easier geographically, especially when zoomed-in.
+### Extra Finding:
+By changing the opacity of the circleMarkers, you can see where the earthquake took place easier geographically, especially when zoomed-in.
 
 ## Programs Used
 - Python 3.7.6
